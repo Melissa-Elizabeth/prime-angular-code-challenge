@@ -2,6 +2,7 @@ app.controller('HeroListController', ['HeroFactory', function(HeroFactory){
     console.log('Hero List Controller loaded');
   var self = this;
  self.heroes = HeroFactory.heroes;
+ self.superpowers = HeroFactory.superpowers;
 
 
  self.deleteHero = function(heroid) {
@@ -11,4 +12,5 @@ app.controller('HeroListController', ['HeroFactory', function(HeroFactory){
    self.updateHero = function(heroid) {
   HeroFactory.updateHero(heroid);
 };
+
 }]);

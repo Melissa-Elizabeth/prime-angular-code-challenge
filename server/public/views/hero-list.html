@@ -16,7 +16,7 @@
         <form>
           <td><input ng-model="hero.persona">  </td>
           <td><input ng-model="hero.alias">  </td>
-          <td><input ng-model="hero.power_id">  </td>
+          <td><select ng-model="hero.power_id" ng-options="superpower.id as superpower.name for superpower in hlc.superpowers.list track by superpower.id"></select> </td>
           <td><button ng-click="hlc.deleteHero(hero.id)">Obliterate</button>  </td>
           <td><button ng-click="hlc.updateHero(hero)">Supercharge</button>  </td>
         </form>
